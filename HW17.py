@@ -1,8 +1,10 @@
 #1
 def add(x, y):
     return x + y
+
 def subtract(x, y):
     return x - y
+
 def multiply(x, y):
     return x * y
 
@@ -20,9 +22,10 @@ def main():
     x = input("Введите первое число: ")
     y = input("Введите второе число: ")
 
-    try:
+    if x.isdigit() and y.isdigit():
         x = int(x)
         y = int(y)
+        
         result = arithmetic_operation("сложение", x, y)
         print(f"Результат сложения: {result}")
 
@@ -31,12 +34,12 @@ def main():
 
         result = arithmetic_operation("умножение", x, y)
         print(f"Результат умножения: {result}")
-        
-    except ValueError:
-        print("Невозможно выполнить арифметические операции")
+    else:
+        print("Ошибка ввода. Введите корректные числа.")
 
 if __name__ == "__main__":
     main()
+
 
 #2
 import math
