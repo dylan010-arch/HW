@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Продукты</title>
+</head>
+<body>
+    <h1>Список продуктов</h1>
+    {% if products %}
+    <ul>
+        {% for product in products %}
+        <li>{{ product.name }} - {{ product.price }} kzt.</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Продукты отсутствуют.</p>
+    {% endif %}
+</body>
+</html>
